@@ -3,41 +3,33 @@ package mainPackage;
 public class Caneta {
 
 	public String modelo;
-	public String cor;
 	private float ponta;
-	protected int carga;
-	protected boolean tampada;
 	
-	public void rabiscar() {
+	public void setModelo(String m) {
 		
-		if (this.tampada == false) {
-		
-			System.out.println("\nRabiscando...");
-			
-		}else {
-			
-			System.out.println("\n~~~~ERRO~~~~\nA caneta não pode rabiscar se estiver tampada!\n");
-		}
+		this.modelo = m;
 	}
 	
-	public void tampar() {
+	public String getModelo() {
 		
-		this.tampada = true;
+		return this.modelo;
 	}
 	
-	public void destampar() {
+	public void setPonta(float p) {
 		
-		this.tampada = false;
+		this.ponta = p;
+	}
+	
+	public float getPonta() {
+		
+		return this.ponta;
 	}
 	
 	public void status() {
 		System.out.println("==================");
 		System.out.println("Status da caneta: \n");
-		System.out.println("Modelo: " + this.modelo);
-		System.out.println("Cor: " + this.cor);
-		System.out.println("Ponta: " + this.ponta);
-		System.out.println("Carga: " + this.carga);
-		System.out.println("Tampada: " + this.tampada);
+		System.out.println("Modelo: " + this.getModelo());
+		System.out.println("Ponta: " + this.getPonta());
 		System.out.println("==================");
 	}
 }
