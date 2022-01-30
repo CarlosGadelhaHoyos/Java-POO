@@ -2,13 +2,13 @@ package mainPackage;
 
 public class Caneta {
 
-	String modelo;
-	String cor;
-	float ponta;
-	int carga;
-	boolean tampada;
+	public String modelo;
+	public String cor;
+	private float ponta;
+	protected int carga;
+	protected boolean tampada;
 	
-	void rabiscar() {
+	public void rabiscar() {
 		
 		if (this.tampada == false) {
 		
@@ -20,17 +20,17 @@ public class Caneta {
 		}
 	}
 	
-	void tampar() {
+	public void tampar() {
 		
 		this.tampada = true;
 	}
 	
-	void destampar() {
+	public void destampar() {
 		
 		this.tampada = false;
 	}
 	
-	void status() {
+	public void status() {
 		System.out.println("==================");
 		System.out.println("Status da caneta: \n");
 		System.out.println("Modelo: " + this.modelo);
