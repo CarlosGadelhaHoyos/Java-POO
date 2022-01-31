@@ -2,8 +2,25 @@ package mainPackage;
 
 public class Caneta {
 
-	public String modelo;
+	String modelo;
 	private float ponta;
+	public boolean tampada;
+
+	public Caneta(){
+		
+		this.modelo = "Bic";
+		this.ponta = 0.9f;
+	}
+	
+	public void tampar() {
+		
+		this.tampada = true;
+	}
+	
+	public void destampar() {
+		
+		this.tampada = false;
+	}
 	
 	public void setModelo(String m) {
 		
@@ -23,6 +40,7 @@ public class Caneta {
 	public float getPonta() {
 		
 		return this.ponta;
+		
 	}
 	
 	public void status() {
