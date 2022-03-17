@@ -4,7 +4,7 @@ public class ContaBanco {
 
 	//Atributos
 	public int numConta;
-	protected char tipo;
+	protected String tipo;
 	private char dono;
 	private float saldo;
 	private boolean status;
@@ -26,12 +26,14 @@ public class ContaBanco {
 		return this.numConta;
 	}
 	
-	public void setTipo(char t) {
+	public void setTipo(String t) {
 		
 		this.tipo = t;
+		t.toLowerCase();
+		t.strip();
 	}
 	
-	public char getTipo() {
+	public String getTipo() {
 		
 		return this.tipo;
 	}
@@ -67,13 +69,30 @@ public class ContaBanco {
 	}
 	
 	//Métodos
-	public void abrirConta() {
+	public void abrirConta(String t) {
 		
+		this.setTipo(t);
+		this.setStatus(true);
+		
+		if(this.tipo.equals("cp")) {
+			
+			this.saldo = 50;
+		}else if(this.tipo.equals("cp")) {
+			
+			this.saldo = 150;
+		}
 	}
 	
 	public void fecharConta() {
 		
-		
+		if(this.saldo == 0) {
+			
+			this.status = false;
+			
+		}else if(this.saldo < 0 || this.saldo > 0) {
+			
+			System.out.println("O saldo da sua conta está negativa ou está com algum dinheiro.\nPara o fechamento da conta, seu saldo deve ser igual a 0");
+		}
 	}
 	
 	public void depositar() {
