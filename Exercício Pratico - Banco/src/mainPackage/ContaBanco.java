@@ -89,25 +89,61 @@ public class ContaBanco {
 			
 			this.status = false;
 			
-		}else if(this.saldo < 0 || this.saldo > 0) {
+		}else if(this.getSaldo() < 0 || this.getSaldo() > 0) {
 			
 			System.out.println("O saldo da sua conta está negativa ou está com algum dinheiro.\nPara o fechamento da conta, seu saldo deve ser igual a 0");
 		}
 	}
 	
-	public void depositar() {
+	public void depositar(float v) {
 		
-		
+		if(this.getStatus() == true) {
+			
+			this.setSaldo(this.getSaldo() + v);
+		}else {
+			
+			System.out.println("É impossivel sacar");
+		}
 	}
 	
-	public void sacar() {
+	public void sacar(float v) {
 		
-		
+		if(this.getStatus() == true) {
+			
+			if(this.getSaldo() > v){
+				
+			}else {
+				
+				System.out.println("Impossível sacar");
+			}
+		}
 	}
 	
 	public void pagarMensal(){
 		
+		float v = 0;
 		
+		if(this.getTipo().equals("cc")) {
+			
+			v = 12;
+		}else if(this.getTipo().equals("cp")) {
+			
+			v = 20;
+		}
+		
+		if(this.getStatus() == true ) {
+			
+			if(this.getSaldo() > v) {
+				
+				this.setSaldo(this.getSaldo() - v);
+			}else if(this.getSaldo() < v) {
+				
+				System.out.println("Saldo insuficiente");
+			}
+		}else {
+			
+			System.out.println("Impossivel pagar");
+		}
 	}
 	
 }
