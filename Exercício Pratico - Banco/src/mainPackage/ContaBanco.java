@@ -31,6 +31,41 @@ public class ContaBanco {
 		this.tipo = t;
 	}
 	
+	public char getTipo() {
+		
+		return this.tipo;
+	}
+	
+	public void setDono(char d) {
+		
+		this.dono = d;
+	}
+	
+	public char getDono(){
+		
+		return this.dono;
+	}
+	
+	public void setSaldo(float s) {
+		
+		this.saldo = s;
+	}
+	
+	public float getSaldo() {
+		
+		return this.saldo;
+	}
+	
+	public void setStatus(boolean stat) {
+		
+		this.status = stat;
+	}
+	
+	public boolean getStatus() {
+		
+		return this.status;
+	}
+	
 	//Métodos
 	public void abrirConta() {
 		
