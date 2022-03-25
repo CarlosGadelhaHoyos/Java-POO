@@ -102,7 +102,7 @@ public class ContaBanco {
 			this.setSaldo(this.getSaldo() + v);
 		}else {
 			
-			System.out.println("É impossivel sacar");
+			System.out.println("É impossivel depositar");
 		}
 	}
 	
@@ -145,4 +145,13 @@ public class ContaBanco {
 			System.out.println("Impossivel pagar");
 		}
 	}	
+	
+	public void StatusConta() {
+		
+		System.out.println(this.getNumConta());
+		System.out.println(this.getTipo());
+		System.out.println(this.getDono());
+		System.out.println(this.getSaldo());
+		System.out.println(this.getStatus());
+	}
 }
