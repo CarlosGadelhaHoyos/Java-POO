@@ -9,5 +9,10 @@ public class Lutadores {
     private int vitorias;
     private int derrotas;
     private int empates;
+
+    /*O que os lutadores farão?
+     * Lista: apresentar, ganhar luta, perder luta, empatar luta e status.
+    */
+
     
 }
