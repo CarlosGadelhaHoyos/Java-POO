@@ -84,6 +84,7 @@ public class Lutadores {
 
     public void setPeso(float peso) {
         this.peso = peso;
+        setCategoria(categoria);
     }
 
     public String getCategoria() {
@@ -91,7 +92,23 @@ public class Lutadores {
     }
 
     public void setCategoria(String categoria) {
-        this.categoria = categoria;
+
+        if(this.peso < 52.2){
+        
+            this.categoria = "Invalido";
+        }else if(this.peso <= 70.3f){
+
+            this.categoria = "Leve";
+        }else if(this.peso <= 83.9){
+
+            this.categoria = "Médio";
+        }else if(this.peso <= 120.2){
+
+            this.categoria = "Pesado";
+        }else{
+
+            this.categoria = "Inválido";
+        }
     }
 
     public int getVitorias() {
