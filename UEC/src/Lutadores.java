@@ -27,23 +27,38 @@ public class Lutadores {
         this.empates = em;
     }
     public void apresentar(){
-
+        System.out.println("Lutador: " + this.getNome());
+        System.out.println("Origem: " + this.getNacionalidade());
+        System.out.println(this.getIdade() + "anos");
+        System.out.println(this.getAltura() + "m de altura");
+        System.out.println("Pesando: " + this.getPeso());
+        System.out.println("Ganhou: " + this.getVitorias());
+        System.out.println("Perdeu: " + this.getDerrotas());
+        System.out.println("Empaptou: " + this.getEmpates());
     }
 
     public void ganharLuta(){
-
+        setVitorias(getVitorias() + 1);
     }
 
     public void perderLuta(){
-
+        setDerrotas(getDerrotas() + 1);
     }
-
+    
     public void empatar(){
-
+        setEmpates(getEmpates() + 1);
     }
 
     public void status(){
-
+        System.out.println("Lutador: " + this.getNome());
+        System.out.println("Nacionalidade: " + this.getNacionalidade());
+        System.out.println("Idade: " + this.getIdade());
+        System.out.println("Altura: " + this.getAltura());
+        System.out.println("Peso: " + this.getPeso());
+        System.out.println("Categoria: " + this.getCategoria());
+        System.out.println("Vitórias: " + this.getVitorias());
+        System.out.println("Derrotas: " + this.getDerrotas());
+        System.out.println("Empates: " + this.getEmpates());
     }
 
     public String getNome() {
@@ -134,6 +149,4 @@ public class Lutadores {
     public void setEmpates(int empates) {
         this.empates = empates;
     }
-    
-    
 }
