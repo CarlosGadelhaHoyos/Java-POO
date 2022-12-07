@@ -44,21 +44,21 @@ public class RemoteControl implements Controler{
     }
 
     public void openMenu() {
-        System.out.println("");
-        System.out.println("Esta ligado? "+ this.isOn());
-        System.out.println("Esta tocando? "+ this.isPlaying());
-        System.out.println("Volume: "+ this.getVolume());
+        System.out.println("\n=== MENU ===");
+        System.out.println("Is it on? "+ this.isOn());
+        System.out.println("Is it playing? "+ this.isPlaying());
+        System.out.printf("Volume: "+this.getVolume()+" ");
         for(int i = 0; i <= this.getVolume(); i+=10){
             System.out.print("|");
         }
-
+        System.out.println();
     }
 
     public void closeMenu() {
-        System.out.println("Fechando menu...");
+        System.out.println("closing menu...");
     }
 
-    public void plusVolum() {
+    public void plusVolume() {
         if(this.isOn()){
             this.setVolume(this.getVolume()+5);
         }
