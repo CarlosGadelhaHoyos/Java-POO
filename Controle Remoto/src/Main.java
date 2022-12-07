@@ -4,9 +4,10 @@ public class Main {
         
         RemoteControl rc = new RemoteControl();
 
+        rc.turnOn();
+        rc.plusVolume();
+        rc.play();
         rc.openMenu();
-        rc.mute();
-        rc.
-        rc.unmute();
+        rc.closeMenu();
     }
 }
