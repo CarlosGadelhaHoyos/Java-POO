@@ -4,7 +4,6 @@ public class Main {
         
         RemoteControl rc = new RemoteControl();
 
-        rc.turnOn();
         rc.plusVolume();
         rc.play();
         rc.openMenu();
