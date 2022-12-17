@@ -103,7 +103,6 @@ public class Lutador{
      */
     public float getPeso() {
         return peso;
-        this.setCategoria();
     }
 
     /**
@@ -111,6 +110,7 @@ public class Lutador{
      */
     public void setPeso(float peso) {
         this.peso = peso;
+        this.setCategoria();
     }
 
     /**
