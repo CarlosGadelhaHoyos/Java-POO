@@ -23,23 +23,37 @@ public class Lutador{
     }
 
     public void apresentar(){
-
+        System.out.println("-----------APRESENTAÇÃO-----------");
+        System.out.println("CHEGOOU A HORA! Apresentando o lutador " + this.getNome());
+        System.out.println("Diretamente de " + this.getNacionalidade());
+        System.out.println("Com " + this.getIdade() + " anos e " + this.getAltura() + " metros.");
+        System.out.println("Pesando " + this.getPeso() + " Quilos");
+        System.out.println(this.getVitorias() + " vitorias");
+        System.out.println(this.getDerrotas() + " derrotas e");
+        System.out.println(this.getEmpates() + " empates.");
+        System.out.println("----------------------------------");
     }
 
     public void status(){
-
+        System.out.println("-------------LUTADOR--------------");
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("Vitórias: " + this.getVitorias());
+        System.out.println("Derrotas: " + this.getDerrotas());
+        System.out.println("Empates: " + this.getEmpates());
+        System.out.println("Categoria: " + this.getCategoria());
+        System.out.println("----------------------------------");
     }
 
     public void ganharLuta(){
-
+        this.setVitorias(this.getVitorias() + 1);
     }
 
     public void perderLuta(){
-
+        this.setDerrotas(this.getDerrotas() + 1);
     }
 
     public void empatarLuta(){
-
+        this.setEmpates(this.getEmpates() + 1);
     }
 
     /**
@@ -178,5 +192,4 @@ public class Lutador{
     public void setEmpates(int empates) {
         this.empates = empates;
     }
-
 }
