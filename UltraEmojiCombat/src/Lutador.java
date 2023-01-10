@@ -16,7 +16,7 @@ public class Lutador{
         this.nacionalidade = na;
         this.idade = id;
         this.altura = al;
-        this.peso = pe;
+        this.setPeso(pe);
         this.vitorias = vit;
         this.derrotas = de;
         this.empates = em;
@@ -131,7 +131,7 @@ public class Lutador{
      * @return String return the categoria
      */
     public String getCategoria() {
-        return categoria;
+        return this.categoria;
     }
 
     /**
