@@ -1,3 +1,3 @@
-# Curso Java POO
- 
-Este repositório é dedicado a exercícios de POO com a linguagem Java.
+Object Oriented Programming 
+
+Hello, I'm Carlos Hoyos and this repository is dadicaded to me to 
