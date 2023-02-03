@@ -6,4 +6,20 @@ public class Book{
     String bookAuthor;
     int currentPage;
     String bookCoverType;
+
+    public void openBook(){
+        
+    }
+
+    public void openBookIn(){
+
+    }
+
+    public void turnThePage(){
+        
+    }
+
+    public void turnBackThePage(){
+
+    }
 }
