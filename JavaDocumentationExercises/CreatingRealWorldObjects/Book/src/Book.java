@@ -1,5 +1,6 @@
 public class Book{
 
+    boolean isOpen;
     String contentGenre;
     int numberOfPages;
     String bookName;
