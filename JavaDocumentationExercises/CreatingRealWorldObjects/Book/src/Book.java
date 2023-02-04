@@ -12,6 +12,11 @@ public class Book{
 
     Scanner scan = new Scanner (System.in);
 
+    public Book(String contentGenre, int numberOfPages, String bookName, String bookAuthor){
+        this.isOpen = false;
+        this.currentPage = 0;
+    }
+
     public void openBook(){
         this.isOpen = true;
         System.out.println("The book was openned...");
