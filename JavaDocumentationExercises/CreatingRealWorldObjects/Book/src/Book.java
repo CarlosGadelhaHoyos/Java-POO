@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Book{
 
     boolean isOpen;
@@ -8,19 +10,24 @@ public class Book{
     int currentPage;
     String bookCoverType;
 
+    Scanner scan = new Scanner (System.in);
+
     public void openBook(){
-        
+        this.isOpen = true;
+        System.out.println("The book was openned...");
     }
 
     public void openBookIn(){
-
+        System.out.println("In what page do you want to open the book?\nR: ");
+        currentPage = scan.nextInt();
+        System.out.println("You openned the book in the page " + currentPage  );
     }
 
     public void turnThePage(){
-        
+        this.currentPage = this.currentPage + 1;
     }
 
     public void turnBackThePage(){
-
+        this.currentPage = this.currentPage + 1;
     }
 }
