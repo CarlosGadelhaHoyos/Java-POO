@@ -56,14 +56,14 @@ public class Pessoa{
     /**
      * @return char return the sexo
      */
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
     /**
      * @param sexo the sexo to set
      */
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
