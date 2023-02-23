@@ -1,11 +1,11 @@
 public class Pessoa {
-    String nome; 
-    int idade;
-    char sexo;
-    int colecaoLivros;
+    private String nome; 
+    private int idade;
+    private char sexo;
+    private int colecaoLivros;
 
     public void comprarLivro(){
-        
+
         this.colecaoLivros++;
     }
 }
