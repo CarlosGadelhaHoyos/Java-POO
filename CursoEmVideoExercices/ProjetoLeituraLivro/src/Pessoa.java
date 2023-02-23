@@ -1,18 +1,28 @@
+import java.util.Scanner;
+
 public class Pessoa{
     private String nome; 
     private int idade;
-    private char sexo;
+    private String sexo;
     private int colecaoLivros;
+    Scanner scan = new Scanner(System.in);
 
     public void comprarLivro(){
-        this.colecaoLivros++;
+        this.setColecaoLivros(colecaoLivros + 1);
     }
 
     public Pessoa(){
         System.out.println("Qual seu nome?\nR: ");
+        this.setNome(scan.nextLine());
+
         System.out.println("Qual sua idade?\nR: ");
+        this.setIdade(scan.nextInt());
+
         System.out.println("Qual seu sexo? Masculino [m], Feminino [f]\nR: ");
+        this.setSexo(scan.nextLine());
+
         System.out.println("Quantos livros você tem?\nR: ");
+        this.setColecaoLivros(scan.nextInt());
     }
 
     /**
