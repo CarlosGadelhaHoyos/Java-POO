@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Livro implements Publicacao{
 
     private String titulo;
@@ -6,6 +7,7 @@ public class Livro implements Publicacao{
     private int pagAtual;
     private boolean aberto;
     private Pessoa leitor;
+    Scanner scan = new Scanner(System.in);
 
     public void detalhes(){
         System.out.println("==== Detalhes do livro ====\n");
