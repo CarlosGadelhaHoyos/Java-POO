@@ -103,7 +103,8 @@ public class Livro implements Publicacao{
 
     @Override
     public void abrir() {
-        // TODO Auto-generated method stub
+        this.setAberto(true);
+        System.out.println("O livro foi aberto...");
     }
 
     @Override
