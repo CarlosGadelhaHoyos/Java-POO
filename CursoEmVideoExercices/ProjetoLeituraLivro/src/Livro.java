@@ -1,4 +1,4 @@
-public class Livro{
+public class Livro implements Publicacao{
 
     private String titulo;
     private String autor;
@@ -99,4 +99,28 @@ public class Livro{
         this.leitor = leitor;
     }
 
+    @Override
+    public void abrir() {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public void fechar() {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public void folear() {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public void avancarPag() {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public void voltarPag() {
+        // TODO Auto-generated method stub
+    }
 }
