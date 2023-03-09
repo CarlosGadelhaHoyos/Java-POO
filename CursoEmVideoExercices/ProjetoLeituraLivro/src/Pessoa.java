@@ -12,16 +12,17 @@ public class Pessoa{
     }
 
     public Pessoa(){
-        System.out.println("Qual seu nome?\nR: ");
+        System.out.println("====Definindo Leitor====\n");
+        System.out.print("Qual seu nome?\nR: ");
         this.setNome(scan.nextLine());
 
-        System.out.println("Qual sua idade?\nR: ");
+        System.out.print("Qual sua idade?\nR: ");
         this.setIdade(scan.nextInt());
 
-        System.out.println("Qual seu sexo? Masculino [m], Feminino [f]\nR: ");
+        System.out.print("Qual seu sexo? Masculino [m], Feminino [f]\nR: ");
         this.setSexo(scan.nextLine());
 
-        System.out.println("Quantos livros você tem?\nR: ");
+        System.out.print("Quantos livros você tem?\nR: ");
         this.setColecaoLivros(scan.nextInt());
     }
 
