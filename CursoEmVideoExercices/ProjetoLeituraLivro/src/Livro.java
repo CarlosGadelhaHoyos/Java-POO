@@ -109,21 +109,33 @@ public class Livro implements Publicacao{
 
     @Override
     public void fechar() {
-        // TODO Auto-generated method stub
+        this.setAberto(false);
+        System.out.println("O livro foi fechado...");
     }
 
     @Override
     public void folear() {
-        // TODO Auto-generated method stub
+        this.pagAtual = scan.nextInt();
+        System.out.println("Foleando ate " + this.pagAtual + "... Pronto! \nPagina atual: " + this.getPagAtual());
     }
 
     @Override
     public void avancarPag() {
-        // TODO Auto-generated method stub
+        if(this.pagAtual == this.totPags){
+            System.out.println("Voce nao pode avancar. Ja esta na ultima pagina do livro.");
+        }else{
+            this.setPagAtual(this.pagAtual++);
+            System.out.println("Avancou uma pagina...\nPagina Pagina atual: " + this.getPagAtual());
+        }
     }
 
     @Override
     public void voltarPag() {
-        // TODO Auto-generated method stub
+        if(this.pagAtual == 1){
+            System.out.println("Impossivel voltar uma pagina. Voce esta na primeira pagina do livro");
+        }else{
+            this.setPagAtual(this.pagAtual++);
+            System.out.println("Voltou pra pagina anterior...\nPagina atual: " + this.pagAtual());
+        }
     }
 }
