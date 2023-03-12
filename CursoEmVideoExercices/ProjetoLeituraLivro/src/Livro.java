@@ -1,11 +1,11 @@
 import java.util.Scanner;
 public class Livro implements Publicacao{
 
-    private String titulo;
-    private String autor;
-    private int totPags;
-    private int pagAtual;
-    private boolean aberto;
+    private String titulo = null;
+    private String autor = null;
+    private int totPags = 0;
+    private int pagAtual = 0;
+    private boolean aberto = false;
     private Pessoa leitor;
     Scanner scan = new Scanner(System.in);
 
