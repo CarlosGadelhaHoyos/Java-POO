@@ -9,6 +9,20 @@ public class Livro implements Publicacao{
     private Pessoa leitor;
     Scanner scan = new Scanner(System.in);
 
+    public Livro(){
+
+        System.out.println("====Definindo atributos do livro====\n");
+        System.out.print("Titulo: ");
+        this.setTitulo(titulo);
+        System.out.print("Autor: ");
+        this.setAutor(autor);
+        System.out.print("Total de páginas: ");
+        this.setTotPags();
+
+        this.setAberto(false);
+        this.setLeitor(leitor.getNome());
+    }
+
     public void detalhes(){
         System.out.println("==== Detalhes do livro ====\n");
         System.out.println("Titulo: " + this.getTitulo());
