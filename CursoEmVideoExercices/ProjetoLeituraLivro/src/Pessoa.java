@@ -14,13 +14,14 @@ public class Pessoa{
     public Pessoa(){
         System.out.println("====Definindo Leitor====\n");
         System.out.print("Qual seu nome?\nR: ");
-        this.setNome(scan.nextLine());
+        this.setNome();
 
         System.out.print("Qual sua idade?\nR: ");
-        this.setIdade(scan.nextInt());
+        this.setIdade();
+        scan.nextLine(); //clean the \n after the insertion of the data above
 
         System.out.print("Qual seu sexo? Masculino [m], Feminino [f]\nR: ");
-        this.setSexo(scan.nextLine());
+        this.setSexo();
 
         System.out.print("Quantos livros você tem?\nR: ");
         this.setColecaoLivros(scan.nextInt());
@@ -36,8 +37,8 @@ public class Pessoa{
     /**
      * @param nome the nome to set
      */
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome() {
+        this.nome = scan.nextLine();
     }
 
     /**
@@ -50,8 +51,8 @@ public class Pessoa{
     /**
      * @param idade the idade to set
      */
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setIdade() {
+        this.idade = scan.nextInt();
     }
 
     /**
@@ -64,8 +65,9 @@ public class Pessoa{
     /**
      * @param sexo the sexo to set
      */
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setSexo() {
+        this.sexo = scan.nextLine();
+        this.sexo.strip().toLowerCase();
     }
 
     /**
