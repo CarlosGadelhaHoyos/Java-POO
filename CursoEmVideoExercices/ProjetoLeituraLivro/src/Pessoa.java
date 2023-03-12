@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class Pessoa{
-    private String nome; 
-    private int idade;
-    private String sexo;
-    private int colecaoLivros;
+    private String nome = null; 
+    private int idade = 0;
+    private String sexo = null;
+    private int colecaoLivros = 0;
     Scanner scan = new Scanner(System.in);
 
     public void comprarLivro(){
