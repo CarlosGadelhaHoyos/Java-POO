@@ -20,7 +20,6 @@ public class Livro implements Publicacao{
         this.setTotPags();
 
         this.setAberto(false);
-        this.setLeitor(leitor.getNome());
     }
 
     public void detalhes(){
@@ -28,7 +27,7 @@ public class Livro implements Publicacao{
         System.out.println("Titulo: " + this.getTitulo());
         System.out.println("Autor:" + this.getAutor());
         System.out.println("Total de paginas: " + this.getTotPags());
-        System.out.println("" + leitor.getNome());
+        System.out.println("Leitor: " + this.leitor.getNome());
     }
 
     /**
@@ -42,7 +41,7 @@ public class Livro implements Publicacao{
      * @param titulo the titulo to set
      */
     public void setTitulo(String titulo) {
-        this.titulo = titulo;
+        this.titulo = scan.nextLine();
     }
 
     /**
@@ -56,7 +55,7 @@ public class Livro implements Publicacao{
      * @param autor the autor to set
      */
     public void setAutor(String autor) {
-        this.autor = autor;
+        this.autor = scan.nextLine();
     }
 
     /**
@@ -69,8 +68,8 @@ public class Livro implements Publicacao{
     /**
      * @param totPags the totPags to set
      */
-    public void setTotPags(int totPags) {
-        this.totPags = totPags;
+    public void setTotPags() {
+        this.totPags = scan.nextInt();
     }
 
     /**
@@ -111,9 +110,6 @@ public class Livro implements Publicacao{
     /**
      * @param leitor the leitor to set
      */
-    public void setLeitor(Pessoa leitor) {
-        this.leitor = leitor;
-    }
 
     @Override
     public void abrir() {
@@ -149,7 +145,7 @@ public class Livro implements Publicacao{
             System.out.println("Impossivel voltar uma pagina. Voce esta na primeira pagina do livro");
         }else{
             this.setPagAtual(this.pagAtual++);
-            System.out.println("Voltou pra pagina anterior...\nPagina atual: " + this.pagAtual());
+            System.out.println("Voltou pra pagina anterior...\nPagina atual: " + this.getPagAtual());
         }
     }
 }
