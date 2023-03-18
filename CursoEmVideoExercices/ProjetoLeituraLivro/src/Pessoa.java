@@ -7,6 +7,7 @@ public class Pessoa{
     Scanner scan = new Scanner(System.in);
 
     public Pessoa() {
+        System.out.println("\n==== Definindo Pessoa ====\n");
         System.out.print("Qual seu nome?\nR: ");
         this.nome = scan.nextLine();
         System.out.print("Qual sua idade?\nR: ");

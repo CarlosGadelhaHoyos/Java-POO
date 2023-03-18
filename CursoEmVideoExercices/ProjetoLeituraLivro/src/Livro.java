@@ -10,7 +10,7 @@ public class Livro implements Publicacao{
     Scanner scan = new Scanner(System.in);
 
     public Livro(Pessoa leitor) {
-        System.out.print("====Definindo detalhes do livro====\n");
+        System.out.print("\n====Definindo detalhes do livro====\n");
         System.out.print("Qual o título do livro?\nR: ");
         this.setTitulo();
         System.out.print("Qual o autor do livro?\nR: ");
@@ -24,6 +24,7 @@ public class Livro implements Publicacao{
     }
 
     public void detalhes(){
+        System.out.println("\n==== Detalhes do Livro ====\n");
         System.out.println("Titulo: " + this.titulo);
         System.out.println("Autor: " + this.autor);
         System.out.println("Total de páginas: " + this.totPaginas);
