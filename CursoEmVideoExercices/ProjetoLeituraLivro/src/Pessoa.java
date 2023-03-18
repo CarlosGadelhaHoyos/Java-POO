@@ -1,12 +1,18 @@
+import java.util.Scanner;
+
 public class Pessoa{
     private String nome;
     private int idade;
     private int quantLivros;
-        
-    public Pessoa(String nome, int idade, int quantLivros) {
-        this.nome = nome;
-        this.idade = idade;
-        this.quantLivros = quantLivros;
+    Scanner scan = new Scanner(System.in);
+
+    public Pessoa() {
+        System.out.println("\n==== Definindo Pessoa ====\n");
+        System.out.print("Qual seu nome?\nR: ");
+        this.nome = scan.nextLine();
+        System.out.print("Qual sua idade?\nR: ");
+        this.idade = scan.nextInt();
+        this.quantLivros = 0;
     }
 
     public void comprarLivro(){
@@ -23,8 +29,8 @@ public class Pessoa{
     /**
      * @param nome the nome to set
      */
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome() {
+        this.nome = scan.nextLine();
     }
 
     /**
@@ -37,8 +43,8 @@ public class Pessoa{
     /**
      * @param idade the idade to set
      */
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setIdade() {
+        this.idade = scan.nextInt();
     }
 
     /**
