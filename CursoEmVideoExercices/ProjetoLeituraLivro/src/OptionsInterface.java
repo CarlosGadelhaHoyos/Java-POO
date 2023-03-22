@@ -10,5 +10,8 @@ public class OptionsInterface {
     public void showClassesOptions(){
         System.out.println("O que deseja fazer?");
         System.out.println("[1] Mostrar opções para PESSOA\n[2] Mostrar opções para Livro");
+    public void showPessoaOptions(){
+
+        System.out.println("==== Opções PESSOA ====\n[1] Mudar nome\n[2] Mudar idade\n[3] Comprar Livro");
     }
 }
