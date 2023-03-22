@@ -7,4 +7,8 @@ public class OptionsInterface {
         Livro l = new Livro(p);
     }
 
+    public void showClassesOptions(){
+        System.out.println("O que deseja fazer?");
+        System.out.println("[1] Mostrar opções para PESSOA\n[2] Mostrar opções para Livro");
+    }
 }
