@@ -12,11 +12,13 @@ public class Pessoa{
         this.nome = scan.nextLine();
         System.out.print("Qual sua idade?\nR: ");
         this.idade = scan.nextInt();
+        scan.nextLine();
         this.quantLivros = 0;
     }
 
     public void comprarLivro(){
         this.quantLivros++;
+        System.out.println("\nLivro comprado\t\tAtual quantidade de livros: " + this.getQuantLivros());
     }
 
     /**
@@ -30,6 +32,7 @@ public class Pessoa{
      * @param nome the nome to set
      */
     public void setNome() {
+        System.out.print("\nDigite o nome: ");
         this.nome = scan.nextLine();
     }
 
@@ -44,6 +47,7 @@ public class Pessoa{
      * @param idade the idade to set
      */
     public void setIdade() {
+        System.out.print("\nDigite a idade: ");
         this.idade = scan.nextInt();
     }
 

@@ -21,6 +21,7 @@ public class Livro implements Publicacao{
         this.pagAtual = 0;
         this.aberto = false;
         this.leitor = leitor;
+        leitor.setQuantLivros(1);
     }
 
     public void detalhes(){
@@ -73,6 +74,7 @@ public class Livro implements Publicacao{
      */
     public void setTotPaginas() {
         this.totPaginas = scan.nextInt();
+        scan.nextLine();
     }
 
     /**
@@ -101,6 +103,7 @@ public class Livro implements Publicacao{
         // TODO Auto-generated method stub
         this.pagAtual = p;
         this.pagAtual = scan.nextInt();
+        scan.nextLine();
         System.out.printf("Foleando até a página %d...", p);
         System.out.printf("Foleado até a página %d. Página atual: %d", p, this.pagAtual);
     }
