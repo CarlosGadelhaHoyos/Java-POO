@@ -21,7 +21,7 @@ public class OptionsInterface {
         if(escolhaOpcao == 1){
             showPessoaOptions(p, l);
         }else if(escolhaOpcao == 2){
-            showLivroOptions();
+            showLivroOptions(p, l);
         }
     }
 
@@ -49,8 +49,41 @@ public class OptionsInterface {
         showClassesOptions(p, l);
     }
 
-    public void showLivroOptions(){
+    public void showLivroOptions(Pessoa p, Livro l){
+        String traduzidoAbertoFechado;
+        int optionChoosed;
 
-        System.out.println("\n==== Opções LIVRO ====\n[1] Abrir Livro\n[2] Fechar livro\n[3] Avançar página\n[4] Voltar página\n[5] Folear");
+        if(l.isAberto() == true){
+            traduzidoAbertoFechado = "Aberto";
+        }else{
+            traduzidoAbertoFechado = "Fechado";
+        }
+
+        System.out.print("\n==== Opções LIVRO ====\n[1] Abrir Livro\t\tLivro: " + traduzidoAbertoFechado + "\n[2] Fechar livro\n[3] Avançar página\n[4] Voltar página\n[5] Folear\n[6] Detalhes do livro\n\nR: ");
+        optionChoosed = scan.nextInt();
+        scan.nextLine();
+
+        switch(optionChoosed){
+            case 1:
+                l.abrir();
+            break;
+            case 2:
+                l.fechar();
+            break;
+            case 3:
+                l.avancarPag();
+            break;
+            case 4:
+                l.voltarPag();
+            break;
+            case 5:
+                l.folear();
+            break;
+            case 6:
+                l.detalhes();
+            break;
+        }       
+        
+        showClassesOptions(p, l);
     }
 }
