@@ -1,3 +1,3 @@
-public class Visitante {
+public class Visitante extends Pessoa{
     
 }
